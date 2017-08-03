@@ -1,21 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './fonts/css/font-awesome.css'
+
+const bodyPagesConst = [
+        {
+          label: 'HOME',
+          key: 0
+        },
+        {
+          label: 'PICS',
+          key: 1
+        },
+        {
+          label: 'VIDEO',
+          key: 2
+        },
+        {
+          label: 'ABOUT ME',
+          key: 3
+        },
+        {
+          label: 'RESUME',
+          key: 4
+        },
+      ];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <NavBar bodyPages={bodyPagesConst}/>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-body">Body</div>
+        <div className="App-footer">Footer</div>
       </div>
     );
   }
 }
+
+const NavBar = ({
+  bodyPages
+}) => 
+  <ul className="NavBar">{bodyPages.map((bodyPage) =>
+      <li className="NavBar-li">{bodyPage.label}</li>
+    )}</ul>
 
 export default App;
