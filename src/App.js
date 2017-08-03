@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Body } from './components/Body';
+import { Button } from './components/Buttons';
 import './App.css';
 import './fonts/css/font-awesome.css'
 
@@ -26,13 +28,23 @@ const bodyPagesConst = [
       ];
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(label) {
+    alert(label);
+  }
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <NavBar bodyPages={bodyPagesConst}/>
+          <NavBar bodyPages={bodyPagesConst} onClick={this.onClick}/>
         </div>
-        <div className="App-body">Body</div>
+        <Body className="App-body"/>
         <div className="App-footer">Footer</div>
       </div>
     );
@@ -40,10 +52,15 @@ class App extends Component {
 }
 
 const NavBar = ({
-  bodyPages
+  bodyPages,
+  onClick
 }) => 
   <ul className="NavBar">{bodyPages.map((bodyPage) =>
-      <li className="NavBar-li">{bodyPage.label}</li>
+      <li className="NavBar-li">
+        <Button onClick={onClick(bodyPage.label)}>
+          {bodyPage.label}
+        </Button>
+      </li>
     )}</ul>
 
 export default App;
