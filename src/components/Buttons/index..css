@@ -1,10 +1,12 @@
 .button-inline {
   border-width: 0;
   background: transparent;
+  margin-left: 10px;
   color: inherit;
   text-align: inherit; -webkit-font-smoothing: inherit; padding: 0;
-  font-size: inherit;
+  font-size: 100%;
   cursor: pointer; 
+  color: red;
 }
 .button-active {
   border-radius: 0;

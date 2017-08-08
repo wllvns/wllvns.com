@@ -1,52 +1,55 @@
 import React, { Component } from 'react';
-import { Body } from './components/Body';
-import { Button } from './components/Buttons';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { Home, Pictures, Videos, Resume } from './components/Pages';
+import { Footer } from './components/Footer';
 import './App.css';
-import './fonts/css/font-awesome.css'
+import './fonts/css/font-awesome.css';
 
 const bodyPagesConst = [
         {
           label: 'HOME',
-          key: 0
+          link: '/',
+          key: 0,
+          text: 'This is just some filler text for the homepage.',
         },
         {
-          label: 'PICS',
-          key: 1
+          label: 'PICTURES',
+          link: '/pictures',
+          key: 1,
+          text: 'This is just some filler text for the pics page.',
         },
         {
-          label: 'VIDEO',
-          key: 2
-        },
-        {
-          label: 'ABOUT ME',
-          key: 3
+          label: 'VIDEOS',
+          link: '/videos',
+          key: 2,
+          text: 'This is just some filler text for the video page.',
         },
         {
           label: 'RESUME',
-          key: 4
+          link: '/resume',
+          key: 3,
+          text: 'This is just some filler text for the resume page.',
         },
       ];
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.onClick = this.onClick.bind(this);
-  }
-
-  onClick(label) {
-    alert(label);
-  }
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <NavBar bodyPages={bodyPagesConst} onClick={this.onClick}/>
+      <Router className="App">
+        <div>
+          <div className="App-header">
+            <NavBar bodyPages={bodyPagesConst} onClick={this.onClick}/>
+          </div>
+          <div className="App-body">
+            <Route exact={true} path="/" component={Home} />
+            <Route exact={true} path="/pictures" component={Pictures} className="App-body"/>
+            <Route exact={true} path="/videos" component={Videos} className="App-body"/>
+            <Route exact={true} path="/resume" component={Resume} className="App-body"/>
+          </div>
+          <Footer className="App-footer" />
         </div>
-        <Body className="App-body"/>
-        <div className="App-footer">Footer</div>
-      </div>
+      </Router>
     );
   }
 }
@@ -57,9 +60,9 @@ const NavBar = ({
 }) => 
   <ul className="NavBar">{bodyPages.map((bodyPage) =>
       <li className="NavBar-li">
-        <Button onClick={onClick(bodyPage.label)}>
+        <Link to={bodyPage.link} className="button-inline">
           {bodyPage.label}
-        </Button>
+        </Link>
       </li>
     )}</ul>
 

@@ -1,0 +1,52 @@
+[
+	{
+		name: "React",
+		category: "Skill",
+		location: "",
+		tags: [
+			"react",
+			"skill",
+			"front-end",
+			"ux"]
+		time: "<1 month",
+		examples: [
+			label: "Personal Website",
+			url: "https://github.com/wllvns/wllvns.com"]
+	},
+	{
+		name: "Node",
+		category: "Skill",
+		location: "",
+		tags: [
+			"Node",
+			"skill",
+			"back-end",
+			"server",
+			"asynchronous"]
+		time: "4 months",
+		examples: [
+			label: "Client Application",
+			url: ""]
+	},
+	{
+		name: "Senior Technical Consultant - Ironside Group",
+		category: "Experience",
+		location: "Boston, MA"
+		tags: [
+			"consulting",
+			"bi",
+			"big data",
+			"snowplow",
+			"reporting",
+			"dashboards",
+			"clients",
+			"design",
+			"ibm",
+			"tableau",
+			"domo"]
+		time: "5 months",
+		examples: [
+			label: "Ironside Group",
+			url: "https://www.ironsidegroup.com"]
+	},
+]

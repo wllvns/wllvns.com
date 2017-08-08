@@ -1,0 +1,63 @@
+.table {
+	width: 80vw;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	float: left;
+}
+
+.section-header {
+	font-size: 120%;
+	border-bottom: solid;
+	border-width: 2px;
+	padding-left: 1%;
+}
+
+.section-item {
+	font-size: 100%;
+	display: flex; 
+	white-space: nowrap; 
+	margin-left: 3%;
+	float: left;
+	width: 100%;
+}
+
+.item-name {
+	float: left;
+	width: 59%;
+}
+
+.item-location {
+	float: center;
+	width: 19%;
+}
+
+.item-experience {
+	float: right;
+	font-variant: small-caps;
+	width: 19%;
+}
+
+.Experienced {
+	color: #3299BB;
+}
+
+.Expert {
+	color: green;
+}
+
+.video {
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	width: 90vw;
+	max-height: 90vh
+}
+
+.pages-paragraph {
+	width: 80vw;
+	padding-top: 1vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	text-align: left;
+}

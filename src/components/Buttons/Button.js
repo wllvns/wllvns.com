@@ -8,7 +8,7 @@ const Button = ({
 }) =>
   <button
     onClick={onClick}
-    className={className}
+    className="button-inline"
     type="button"
   >
     {children}
