@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { resumeData } from '../../constants';
 import { Button } from '../../components/Buttons';
+import { SearchBar } from '../../components/Search';
 import './index..css';
 
 function isSearched(searchValue) {
@@ -35,22 +36,14 @@ class Resume extends Component {
 	render () {
 		return (
 			<div>
-				<div style={{width: "50vw", marginLeft: "25vw", marginRight: "25vw", fontSize: "75%", textAlign: "center"}}>
-					<div style={{paddingTop: "5px"}}>Search below. Tags are employed in the background, so feel free to search for words you can't see.</div>
-					<form style={{paddingTop: "10px"}}>
-						<input 
-							type="text"
-							value={this.state.searchValue}
-							onChange={this.onSearchChange}
-						>
-						</input>
-						<Button
-							onClick={this.onClear}
-						>
-							Clear
-						</Button>
-					</form>
-				</div>
+				<SearchBar 
+					label="Filter below. There are non-visible tags, so feel free to try words you can't see." 
+					value={this.searchValue}
+					onChange={this.onSearchChange}
+					onClick={this.onClear}
+				>
+					Clear
+				</SearchBar>
 				<div className="table">
 					{resumeData.map((resumeDatum) => 
 						<div>

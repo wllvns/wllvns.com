@@ -1,5 +1,9 @@
-import resumeData from './resumeData'
+import resumeData from './resumeData';
+import pictures from './pictures';
+import videos from './videos';
 
 export {
-	resumeData
+	resumeData,
+	pictures,
+	videos
 };

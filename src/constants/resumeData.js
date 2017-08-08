@@ -106,6 +106,28 @@ const resumeData = [
 						url: ""
 					}]
 			},
+			{
+				name: "Design",
+				location: "",
+				tags: "",
+				experience: "",
+				examples: [
+					{
+						label: "Client Dashboards/Reports",
+						url: ""
+					}]
+			},
+			{
+				name: "Swift",
+				location: "",
+				tags: "",
+				experience: "Beginner",
+				examples: [
+					{
+						label: "Client Dashboards/Reports",
+						url: ""
+					}]
+			},
 		]
 	},
 	{
@@ -182,49 +204,16 @@ const resumeData = [
 						url: ""
 					}]
 			},
-			{
-				name: "Recruitment Co-Chair - Chi Phi Fraternity",
-				location: "Lewisburg, PA",
-				tags: "greek,marketing",
-				experience: "Jan '13 - Dec '13",
-				examples: [
-					{
-						label: "",
-						url: ""
-					}]
-			},
-			{
-				name: "Executive Board, Risk Manager - Chi Phi Fraternity",
-				location: "Lewisburg, PA",
-				tags: "greek,management",
-				experience: "Jan '12 - Dec '12",
-				examples: [
-					{
-						label: "",
-						url: ""
-					}]
-			},
 		]
 	},
 	{
 		category: "Interests",
 		items: [
 			{
-				name: "Photography",
+				name: "Photography/Videography",
 				location: "",
 				tags: "",
 				experience: "12 years",
-				examples: [
-					{
-						label: "",
-						url: ""
-					}]
-			},
-			{
-				name: "Videography",
-				location: "",
-				tags: "",
-				experience: "8 years",
 				examples: [
 					{
 						label: "",
@@ -265,40 +254,7 @@ const resumeData = [
 					}]
 			},
 			{
-				name: "Design",
-				location: "",
-				tags: "",
-				experience: "",
-				examples: [
-					{
-						label: "",
-						url: ""
-					}]
-			},
-			{
-				name: "Surfing",
-				location: "",
-				tags: "",
-				experience: "2 years",
-				examples: [
-					{
-						label: "",
-						url: ""
-					}]
-			},
-			{
-				name: "Welding",
-				location: "",
-				tags: "",
-				experience: "6 years",
-				examples: [
-					{
-						label: "",
-						url: ""
-					}]
-			},
-			{
-				name: "Beer (mostly cold, occasionally Belgian)",
+				name: "Beer",
 				location: "",
 				tags: "",
 				experience: "",

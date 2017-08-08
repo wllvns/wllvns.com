@@ -1,12 +1,18 @@
 import React from 'react';
-import videoLoc from '../../assets/videos/whales_web.mov';
+import { videos } from '../../constants';
 
 const Videos = () => {
+
 	return (
-		<video className="video" autoPlay controls>
-		  <source src={videoLoc} />
-		  Your browser does not support HTML5 video.
-		</video>
+		<div>
+			{videos.map((video) => (
+				<video className="media" controls autoBuffer>
+				  <source src={video.url} />
+				  Your browser does not support HTML5 video.
+				</video>
+				)
+			)}
+		</div>
 	)
 }
 
