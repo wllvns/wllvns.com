@@ -1,1 +1,1 @@
-A small example of some React code I've been working on to create a personal website at [wllvns.com](wllvns.com). Functionality is a bit limited at the moment, but check back often as things are changing rapidly.
+A small example of some React code I've been working on to create a personal website at [wllvns.com](http://wllvns.com). Functionality is a bit limited at the moment, but check back often as things are changing rapidly.
