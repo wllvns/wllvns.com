@@ -14,21 +14,21 @@ for dirName, subdirList, fileList in os.walk(rootDir):
     	if '.jpg' in str(fname):
         	foPics.write('\n\t{\n\t\tname: "UNDEF",\n\t\turl: "http://wllvns.com/assets/pictures/' + str(fname) + '",\n\t\ttags: "UNDEF",\n\t},')
 
-foPics.write('\n];\n\nexport default pictures;')
-foPics.close()
+foVids.write('\n];\n\nexport default pictures;')
+foVids.close()
 
 #open assets constants to write to
-foPics = open('./src/constants/videos.js', 'r+b')
+foVids = open('./src/constants/videos.js', 'r+b')
 
-foPics.truncate()
-foPics.write('const videos = [')
+foVids.truncate()
+foVids.write('const videos = [')
 # Set the directory you want to start from
 rootDir = './assets/videos'
 for dirName, subdirList, fileList in os.walk(rootDir):
     print('Found directory: %s' % dirName)
     for fname in fileList:
     	if '.mov' in str(fname):
-        	foPics.write('\n\t{\n\t\tname: "UNDEF",\n\t\turl: "http://wllvns.com/assets/videos/' + str(fname) + '",\n\t\ttags: "UNDEF",\n\t},')
+        	foVids.write('\n\t{\n\t\tname: "UNDEF",\n\t\turl: "http://wllvns.com/assets/videos/' + str(fname) + '",\n\t\ttags: "UNDEF",\n\t},')
 
-foPics.write('\n];\n\nexport default videos;')
-foPics.close()
+foVids.write('\n];\n\nexport default videos;')
+foVids.close()
